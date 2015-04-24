@@ -2,11 +2,10 @@
 /**
  * Created by miroslawratman on 21/04/15.
  */
-'use strict'
+'use strict';
 
 var React = require('react');
-
-var App = require('./components/app.js');
+var App = require('./components/App.js');
 
 React.render(
   <App />,

@@ -1,12 +1,16 @@
 * {margin:0; padding:0}
 
-h1 {font-size:14px}
-
 #wrapper {margin:10px; overflow:hidden}
 #wrapper .left {width:50%; float:left;}
+    .left ul {list-style:none; margin:0; width: 400px}
+    .left ul li {display:block; margin:2px 0}
+    .left ul li a {padding:2px 5px; border:1px solid #ddd; background:#eee; display:inline-block;}
+    .left ul ul {margin-left:10px}
+    .left ul  ul.show {display:block}
+    .left ul  ul.hide {display:none}
 #wrapper .right {width:50%; float:left}
-.right ul {overflow:hidden; list-style:none}
-.right ul li {float:left}
-.right ul li a {display:inline-block; margin:2px 5px;}
-.right textarea {width:680px; min-height:300px; border:1px solid #ccc; padding:10px}
-.right pre {width:680px; background-color: ghostwhite; border: 1px solid silver; padding:10px}
+    .right ul {overflow:hidden; list-style:none}
+    .right ul li {float:left}
+    .right ul li a {display:inline-block; margin:2px 5px;}
+    .right textarea {width:680px; min-height:300px; border:1px solid #ccc; padding:10px}
+    .right pre {width:680px; background-color: ghostwhite; border: 1px solid silver; padding:10px}

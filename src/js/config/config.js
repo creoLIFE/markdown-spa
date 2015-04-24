@@ -1,9 +1,10 @@
 /**
  * Created by miroslawratman on 22/04/15.
  */
+'use strict';
 
-var config = {
-    parseDepth: 2,
+var Config = {
+    parseDepth: 5,
     apiDomain: 'http://markdown-spa.local',
     apiPort: '8080'
 };
@@ -12,4 +13,4 @@ var config = {
  * Config module exports
  * @return [object]
  */
-module.exports = config;
+module.exports = Config;

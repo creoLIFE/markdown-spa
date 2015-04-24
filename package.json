@@ -1,6 +1,6 @@
 {
     "name": "markdown-spa",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "description": "A simple SPA",
     "author": "Mirek Ratman",
     "repository": "https://github.com/creoLIFE/markdown-spa",
@@ -16,6 +16,7 @@
         "object-assign": "~1.0.*",
         "request-promise": "~0.4.*",
         "querystring": "~0.2.*",
-        "pretty-data": "~0.40.*"
+        "pretty-data": "~0.40.*",
+        "rc-menu": "~3.1.*"
     }
 }

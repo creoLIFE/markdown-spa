@@ -7,9 +7,9 @@
 5. run browser and type markdown-spa.local
 
 P.S. If you want to use different domain/port for Markdown API than "markdown-spa.local:8080"
-     then update /src/js/config/config.js apiDomain and apiPort parameter.
+     then update /src/js/config/Config.js apiDomain and apiPort parameter.
 
 P.S. Please remember that if you will use for Markdown SPA different domain name than "markdown-spa.local"
      you need also update Markdown API config parameter "accessControlAllowOriginDomain" in Markdown API
-     config located in /app/config/config.js for Access-Control-Allow-Origin parameters.
+     config located in /app/config/Config.js for Access-Control-Allow-Origin parameters.
      Its required then because of cross-domain calls.

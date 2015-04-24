@@ -3,9 +3,8 @@
  */
 'use strict';
 
-var rp = require('request-promise');
-var querystring = require('querystring');
-var config = require('../config/config');
+var Rp = require('request-promise');
+var Config = require('../config/config');
 
 /**
  * Wrapper for calling a API
@@ -14,7 +13,7 @@ var Api = {
     parseContent: function ( content, next ) {
         var requestOpts = {
             encoding: 'utf8',
-            uri: config.apiDomain + ':' + config.apiPort + '/parse-content/' + config.parseDepth,
+            uri: Config.apiDomain + ':' + Config.apiPort + '/parse-content/' + Config.parseDepth,
             method: 'POST',
             body: content,
             headers: {
@@ -23,7 +22,7 @@ var Api = {
             }
         };
 
-        rp(requestOpts)
+        Rp(requestOpts)
             .then(function(data) {
                 next(data);
             })
