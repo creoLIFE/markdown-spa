@@ -2,27 +2,11 @@
 
 h1 {font-size:14px}
 
-#wrapper {width:100%; overflow:hidden}
+#wrapper {margin:10px; overflow:hidden}
 #wrapper .left {width:50%; float:left;}
 #wrapper .right {width:50%; float:left}
-    .right ul {overflow:hidden; list-style:none}
-    .right ul li {float:left}
-    .right ul li a {display:inline-block; margin:2px 5px;}
-    .right textarea {width:99%; min-height:100px; border:1px solid #ccc}
-    .right .parser {width:100%; min-height:600px; border:10x solid #ccc}
-
-pre {
-    background-color: ghostwhite;
-    border: 1px solid silver;
-    padding: 10px 20px;
-    margin: 20px;
-}
-.json-key {
-    color: brown;
-}
-.json-value {
-    color: navy;
-}
-.json-string {
-    color: olive;
-}
+.right ul {overflow:hidden; list-style:none}
+.right ul li {float:left}
+.right ul li a {display:inline-block; margin:2px 5px;}
+.right textarea {width:680px; min-height:300px; border:1px solid #ccc; padding:10px}
+.right pre {width:680px; background-color: ghostwhite; border: 1px solid silver; padding:10px}

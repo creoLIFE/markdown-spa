@@ -6,10 +6,10 @@
 var AppDispatcher = require('../dispatcher/AppDispatcher');
 
 var AppActions = {
-    parseMarkdown: function (data) {
+    parseMarkdown: function (data, next) {
         AppDispatcher.handleParseAction({
             data: data
-        })
+        }, next);
     }
 }
 

@@ -5,18 +5,16 @@
 
 var Dispatcher = require('flux').Dispatcher;
 var assign = require('object-assign');
+var Api = require('../services/api');
+
 
 var AppDispatcher = assign(new Dispatcher(), {
-    handleParseAction: function (object) {
-        console.log(object.data);
-        this.dispatch(object.data
-        );
+    handleParseAction: function (object, next) {
+        var t = this;
+        Api.parseContent(object.data, function(data){
+            next(data);
+        });
     }
 });
-
-//AppDispatcher.register(function (payload) {
-//    console.log(payload);
-//    return true;
-//});
 
 module.exports = AppDispatcher;

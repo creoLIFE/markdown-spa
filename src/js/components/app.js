@@ -6,11 +6,21 @@
 
 var React = require('react');
 var AppActions = require('../actions/AppActions');
-var AppStore = require('../stores/AppStore');
+var JsonHelper = require('../helpers/Json');
+var jsonBeautifer = require('pretty-data').pd;
 
 var App = React.createClass({
     editorChange: function (event) {
-        AppActions.parseMarkdown(event.target.value);
+        var t = this;
+        AppActions.parseMarkdown(event.target.value, function(data){
+            jsonBeautifer.json()
+
+            var newData = {value: jsonBeautifer.json(data) };
+            t.setState({data: newData});
+        });
+    },
+    getInitialState: function() {
+        return {data: {value: 'No JSON object'}};
     },
     render: function () {
         return (
@@ -19,16 +29,10 @@ var App = React.createClass({
                     <h1>ToC</h1>
                 </div>
                 <div className="right">
-                    <ul>
-                        <li>
-                            <a href="#">Editor</a>
-                        </li>
-                        <li>
-                            <a href="#">Parser</a>
-                        </li>
-                    </ul>
-                    <textarea className="editor" onChange={this.editorChange}></textarea>
-                    <div className="parser"></div>
+                    <textarea className="editor" onChange={this.editorChange} />
+                    <pre className="prettyprint">
+                        <code dangerouslySetInnerHTML={{__html: this.state.data.value}} />
+                    </pre>
                 </div>
             </div>
             )
